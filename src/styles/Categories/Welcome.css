@@ -1,0 +1,11 @@
+.hello {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 24px;
+}
+
+.name {
+  color: rgba(255, 0, 0, 1);
+}

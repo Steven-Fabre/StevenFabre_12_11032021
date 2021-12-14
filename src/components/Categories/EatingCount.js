@@ -10,7 +10,7 @@ export default function EatingCount(data) {
   const icons = [calories, proteins, fat, carbs];
   const userData = data.data;
   return (
-    <div className="keydata_container">
+    <section className="keydata_container">
       {categories.map((element, index) => (
         <div className="card keydata" key={index}>
           <img src={icons[index]} alt={element}></img>
@@ -20,6 +20,6 @@ export default function EatingCount(data) {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 }

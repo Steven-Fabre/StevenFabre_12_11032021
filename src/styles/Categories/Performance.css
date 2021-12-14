@@ -1,0 +1,16 @@
+.performance-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-height: 250px;
+  max-width: 250px;
+  min-height: 200px;
+  min-width: 200px;
+  margin: 2px;
+  border-radius: 5px;
+  background: #282d30;
+}
+
+.recharts-polar-angle-axis-tick-value {
+  font-size: 12px;
+}

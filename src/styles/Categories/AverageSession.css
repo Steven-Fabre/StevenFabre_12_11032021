@@ -1,0 +1,37 @@
+.line-container {
+  position: relative;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  max-height: 250px;
+  max-width: 250px;
+  min-height: 200px;
+  min-width: 200px;
+  margin: 2px;
+}
+
+.custom-tooltip-line {
+  padding: 5px;
+  background-color: white;
+}
+
+.line-title {
+  color: white;
+  z-index: 3;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50%;
+}
+
+.weekdays {
+  color: white;
+  z-index: 3;
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  justify-content: space-evenly;
+}

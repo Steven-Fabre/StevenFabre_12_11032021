@@ -3,7 +3,7 @@ import "../../styles/Categories/Welcome.css";
 
 export default function Welcome(data) {
   return (
-    <div>
+    <div className="welcome">
       <h1 className="hello">
         Bonjour <span className="name">{data.data?.userInfos?.firstName}</span>
       </h1>

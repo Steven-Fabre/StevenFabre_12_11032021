@@ -11,11 +11,13 @@ export default function App() {
     <Router>
       <div className="App">
         <Header />
-        <VerticalLayout />
-        <Routes>
-          <Route path="/:env/:id" element={<Dashboard />} />
-          <Route path="/" element={<Navigation />} />
-        </Routes>
+        <div className="container">
+          <VerticalLayout />
+          <Routes>
+            <Route path="/:env/:id" element={<Dashboard />} />
+            <Route path="/" element={<Navigation />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );

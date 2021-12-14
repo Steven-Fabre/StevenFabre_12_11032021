@@ -8,6 +8,7 @@ import GetData from "../services/GetData";
 import Loader from "./Loader";
 import Welcome from "./Categories/Welcome";
 import EatingCount from "./Categories/EatingCount";
+import TodayScore from "./Categories/TodayScore";
 
 export default function Dashboard() {
   const { env, id } = useParams();
@@ -16,13 +17,22 @@ export default function Dashboard() {
   const activityData = GetData(env, id, "activity");
   const performanceData = GetData(env, id, "performance");
 
+  if (userData.isLoading) return <Loader />;
+
   return (
-    <div className="dashboard">
-      {userData.isLoading ? <Loader /> : <Welcome data={userData.data} />}
-      <Activity data={activityData} />
-      <AverageSession data={averageData} />
-      <Performance data={performanceData.data} />
-      {userData.isLoading ? <Loader /> : <EatingCount data={userData.data.keyData} />}
-    </div>
+    <main className="dashboard">
+      <div className="dashboard-main">
+        <Welcome data={userData.data} />
+        <Activity data={activityData} />
+        <div className="dashboard-lower">
+          <AverageSession data={averageData} />
+          <Performance data={performanceData} />
+          <TodayScore data={userData} />
+        </div>
+      </div>
+      <aside>
+        <EatingCount data={userData.data.keyData} />
+      </aside>
+    </main>
   );
 }

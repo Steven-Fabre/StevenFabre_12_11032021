@@ -1,6 +1,39 @@
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
 .dashboard {
   display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.dashboard-main {
+  display: flex;
+  height: 99%;
+  width: 100%;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex: 2;
+  margin-left: 10%;
+  justify-content: space-evenly;
+}
+
+.dashboard-lower {
+  display: flex;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+}
+
+@media screen and (max-width: 1150px) {
+  .dashboard-main {
+    margin-left: 1%;
+  }
 }

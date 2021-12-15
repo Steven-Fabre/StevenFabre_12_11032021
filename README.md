@@ -51,3 +51,10 @@ You can go back to Home page by clicking on the sportsee's logo and swap between
 ## Help
 
 If you get any issues, please add issue to the repository.
+
+## Tools
+
+Kanban
+* https://www.notion.so/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e
+Figma's model
+* https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1

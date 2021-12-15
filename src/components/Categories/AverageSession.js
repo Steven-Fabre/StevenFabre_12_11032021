@@ -1,7 +1,22 @@
+/**
+ * Average Session chart
+ * Rendering component
+ */
+
 import React, { useState, useEffect } from "react";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 import "../../styles/Categories/AverageSession.css";
 import Loader from "../Loader";
+import Error from "../Error";
+import PropTypes from "prop-types";
+
+AverageSession.propTypes = {
+  data: PropTypes.shape({
+    isLoading: PropTypes.bool,
+    error: PropTypes.bool,
+    data: PropTypes.object,
+  }).isRequired,
+};
 
 export default function AverageSession({ data }) {
   const [Averagedata, setAverageData] = useState({});
@@ -9,6 +24,7 @@ export default function AverageSession({ data }) {
 
   useEffect(() => {
     if (data.isLoading) return;
+    if (data.error) return;
     else return setAverageData(data.data);
   }, [data]);
 
@@ -35,6 +51,7 @@ export default function AverageSession({ data }) {
   };
 
   if (data.isLoading) return <Loader />;
+  if (data.error) return <Error />;
   return (
     <section
       style={{ background: `linear-gradient(to right, #FF0000 0%, #FF0000 ${perc}%, #B80202 ${perc}%, #B80202 100%)` }}

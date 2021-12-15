@@ -1,13 +1,29 @@
+/**
+ * Activity chart
+ * Rendering component
+ */
+
 import React, { useState, useEffect } from "react";
 import "../../styles/Categories/Activity.css";
 import { BarChart, CartesianGrid, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 import Loader from "../Loader";
+import Error from "../Error";
+import PropTypes from "prop-types";
+
+Activity.propTypes = {
+  data: PropTypes.shape({
+    isLoading: PropTypes.bool,
+    error: PropTypes.bool,
+    data: PropTypes.object,
+  }).isRequired,
+};
 
 export default function Activity({ data }) {
   const [ActivityData, setActivityData] = useState({});
 
   useEffect(() => {
     if (data.isLoading) return;
+    if (data.error) return;
     return setActivityData(data.data);
   }, [data]);
 
@@ -29,13 +45,25 @@ export default function Activity({ data }) {
   };
 
   if (data.isLoading) return <Loader />;
+  if (data.error) return <Error />;
   return (
     <section className="activity-container">
+      <div className="activity-title">Activité quotidienne</div>
+      <div className="activity-circles">
+        <div className="activity-label">
+          <div className="activity-circle_black"></div>
+          <p>Poids (kg)</p>
+        </div>
+        <div className="activity-label">
+          <div className=" activity-circle_red"></div>
+          <p>Calories brûlées (kCal)</p>
+        </div>
+      </div>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart
           data={ActivityData.sessions}
           margin={{
-            top: 25,
+            top: 100,
             right: 25,
             left: 25,
             bottom: 25,

@@ -1,13 +1,29 @@
+/**
+ * Today Score chart
+ * Rendering component
+ */
+
 import React, { useEffect, useState } from "react";
 import "../../styles/Categories/TodayScore.css";
 import Loader from "../Loader";
+import Error from "../Error";
 import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
+import PropTypes from "prop-types";
+
+TodayScore.propTypes = {
+  data: PropTypes.shape({
+    isLoading: PropTypes.bool,
+    error: PropTypes.bool,
+    data: PropTypes.object,
+  }).isRequired,
+};
 
 export default function TodayScore({ data }) {
   const [TodayScoreData, setTodayScoreData] = useState({});
 
   useEffect(() => {
     if (data.isLoading) return;
+    if (data.error) return;
     return setTodayScoreData(data.data);
   }, [data]);
 
@@ -16,6 +32,8 @@ export default function TodayScore({ data }) {
     { name: "completed", value: TodayScoreData.todayScore * 100 },
     { name: "toDo", value: 100 - TodayScoreData.todayScore * 100 },
   ];
+
+  if (data.error) return <Error />;
   return (
     <section className="todayscore-container">
       <div className="todayscore-title">Score</div>

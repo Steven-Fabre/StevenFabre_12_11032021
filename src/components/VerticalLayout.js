@@ -1,3 +1,7 @@
+/**
+ * Rendering component
+ */
+
 import React from "react";
 import Zen from "../assets/zen.svg";
 import Swim from "../assets/swim.svg";

@@ -1,4 +1,14 @@
+/**
+ * Custom Hook
+ * Return object in json containing Data, Error, and Loading State
+ */
+
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+
+useFetch.propTypes = {
+  url: PropTypes.string.isRequired,
+};
 
 export function useFetch(url) {
   const [data, setData] = useState({});

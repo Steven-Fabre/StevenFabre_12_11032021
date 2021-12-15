@@ -1,9 +1,11 @@
+/**
+ * Rendering component
+ */
+
 import React from "react";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import "../styles/Header.css";
 import { Link } from "react-router-dom";
-
-//This component render the Header of each page
 
 export default function Header() {
   return (

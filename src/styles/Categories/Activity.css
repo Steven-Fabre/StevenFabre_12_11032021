@@ -11,3 +11,47 @@
   align-items: center;
   justify-content: center;
 }
+
+.custom-tooltip {
+  background-color: #e60000;
+  color: white;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.activity-title {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.activity-circles {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.activity-label {
+  display: flex;
+  align-items: center;
+}
+
+.activity-circle_black,
+.activity-circle_red {
+  width: 0.6rem;
+  height: 0.65rem;
+  border-radius: 0.3rem;
+  margin-right: 10px;
+}
+.activity-circle_red {
+  background-color: #e60000;
+}
+.activity-circle_black {
+  background-color: black;
+}
+.activity-label > p {
+  margin: 0;
+}

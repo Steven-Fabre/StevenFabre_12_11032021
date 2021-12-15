@@ -56,5 +56,6 @@ If you get any issues, please add issue to the repository.
 
 Kanban
 * https://www.notion.so/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e
+
 Figma's model
 * https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1

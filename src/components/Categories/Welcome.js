@@ -1,6 +1,7 @@
 /**
  * Welcome message
  * Rendering component
+ * @param {object} data - User's data fetched from external service
  */
 
 import React, { useState, useEffect } from "react";

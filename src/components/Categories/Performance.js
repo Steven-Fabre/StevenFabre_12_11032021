@@ -1,6 +1,7 @@
 /**
  * Performance chart
  * Rendering component
+ * @param {object} data - User's data fetched from external service
  */
 
 import React, { useEffect, useState } from "react";

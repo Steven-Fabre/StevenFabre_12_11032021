@@ -1,7 +1,7 @@
 /**
- * Display dashboard
- * Dispatching data
- * Rendering component
+ * @function - Creating the dashboard using external service for fetch Data
+ * @param {number} id - ID of the user given by the URL
+ * @author Steven Fabre <stevenfabrepro@gmail.com>
  */
 
 import React from "react";

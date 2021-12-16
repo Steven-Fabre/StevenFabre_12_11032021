@@ -1,5 +1,6 @@
 /**
  * Simple Error placeholder
+ * Rendering component
  */
 
 import React from "react";

@@ -2,6 +2,11 @@
  * Service dispatching the API Call
  * Able to switch between Local env or API
  * Return Custom Hook's useFetch
+ * Represents a book.
+ * @function - Dispatching data for components
+ * @param {string} id - ID of the user.
+ * @param {string} category - Category of data that you wan't to get.
+ * @return {object} - using custom hook returning JSON formated Object
  */
 
 import { useFetch } from "../hooks/useFetch";

@@ -1,6 +1,8 @@
 /**
  * Custom Hook
  * Return object in json containing Data, Error, and Loading State
+ * @function
+ * @param {string} url -  Url of data fetched (can be local or API)
  */
 
 import { useState, useEffect } from "react";

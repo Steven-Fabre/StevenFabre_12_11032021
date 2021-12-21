@@ -29,9 +29,10 @@ export default function TodayScore({ data }) {
   }, [data]);
 
   if (data.isLoading) return <Loader />;
+  const scoreData = TodayScoreData.todayScore ? TodayScoreData.todayScore : TodayScoreData.score;
   const score = [
-    { name: "completed", value: TodayScoreData.todayScore * 100 },
-    { name: "toDo", value: 100 - TodayScoreData.todayScore * 100 },
+    { name: "completed", value: scoreData * 100 },
+    { name: "toDo", value: 100 - scoreData * 100 },
   ];
 
   if (data.error) return <Error />;
@@ -39,7 +40,7 @@ export default function TodayScore({ data }) {
     <section className="todayscore-container">
       <div className="todayscore-title">Score</div>
       <div className="todayscore-score">
-        <p className="todayscore-score-number">{TodayScoreData.todayScore * 100}%</p>
+        <p className="todayscore-score-number">{scoreData * 100}%</p>
         <p className="todayscore-score-label">de votre objectif</p>
       </div>
       <ResponsiveContainer width="100%" height="100%">

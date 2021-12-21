@@ -47,6 +47,7 @@ export default function Performance({ data }) {
         return "";
     }
   }
+
   if (data.isLoading) return <Loader />;
   if (data.error) return <Error />;
   return (

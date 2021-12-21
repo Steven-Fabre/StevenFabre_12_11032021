@@ -18,7 +18,7 @@ export default function VerticalLayout() {
         <img className="vl-logo" src={Bicycle} alt="Bicycle" />
         <img className="vl-logo" src={Dumbell} alt="Dumbell" />
       </div>
-      <p className="vl-copyright">Copiryght, SportSee 2020</p>
+      <p className="vl-copyright">Copyright, SportSee 2020</p>
     </div>
   );
 }

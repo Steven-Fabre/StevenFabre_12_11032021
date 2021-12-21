@@ -25,7 +25,7 @@ export default function Activity({ data }) {
   useEffect(() => {
     if (data.isLoading) return;
     if (data.error) return;
-    return setActivityData(data.data);
+    setActivityData(data.data);
   }, [data]);
 
   const formatXAxis = (tickItem) => {

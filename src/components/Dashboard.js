@@ -10,12 +10,12 @@ import "../styles/Dashboard.css";
 import Activity from "./Categories/Activity";
 import AverageSession from "./Categories/AverageSession";
 import Performance from "./Categories/Performance";
-import GetData from "../services/GetData";
 import Loader from "./Loader";
 import Welcome from "./Categories/Welcome";
 import EatingCount from "./Categories/EatingCount";
 import TodayScore from "./Categories/TodayScore";
 import Error from "./Error";
+import GetData from "../services/GetData";
 
 export default function Dashboard() {
   const { id } = useParams();
